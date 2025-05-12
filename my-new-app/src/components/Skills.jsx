@@ -58,7 +58,7 @@ const Skill = styled(motion.span)`
 
 export default function Skills() {
   const skillNames = [
-    "Photoshop", "Illustrator", "Figma", "React", "Styled-Components", "Branding", "UI/UX"
+    "Krita", "Painting", "Figma", "React", "Styled-Components", "Branding", "UI/UX", "Writing"
   ];
 
   return (
