@@ -117,7 +117,7 @@ export default function Projects() {
         >
           <ProjectImage src="/artwork-image.jpg" alt="Artwork" />
           <Tech>Digital Art, Illustrator</Tech>
-          <Description>A collection of my digital artworks.</Description>
+          <Description>A collection of my digital and physical artworks.</Description>
           <Button to="/artwork">View Artwork</Button>
         </Card>
 
@@ -140,7 +140,7 @@ export default function Projects() {
           <ProjectImage src="/work-image.jpg" alt="Work" />
           <Tech>UX Design, Freelance</Tech>
           <Description>Selected professional projects.</Description>
-          <Button to="/work">View Work</Button>
+          <Button to="/work">View Projects</Button>
         </Card>
       </Grid>
     </Section>

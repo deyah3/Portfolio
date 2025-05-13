@@ -17,7 +17,7 @@ const Title = styled.h2`
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   margin-bottom: 2rem;
-  background: linear-gradient(to right, #d6a4b7, #8e9eab); /* Muted pink and soft blue gradient */
+  background: linear-gradient(to right,rgb(230, 219, 223), #8e9eab); /* Muted pink and soft blue gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 2px;
@@ -96,7 +96,7 @@ const SectionTitle = styled.h3`
   font-family: 'Press Start 2P', cursive;
   font-size: 2.5rem;
   margin-top: 4rem;
-  color: #d6a4b7;
+  color:rgb(197, 155, 223);
 `;
 
 export default function Artwork() {
@@ -118,7 +118,7 @@ export default function Artwork() {
         >
           <ArtworkImage src="/digital-art1.jpg" alt="Digital Art 1" />
           <Description>
-            A digital painting inspired by futuristic landscapes and technology.
+            A digital art of a Giraffe using krita.
           </Description>
         </ArtworkCard>
 
@@ -129,8 +129,7 @@ export default function Artwork() {
         >
           <ArtworkImage src="/digital-art2.jpg" alt="Digital Art 2" />
           <Description>
-            Concept art for a video game, blending nature with technology.
-          </Description>
+A digital art of an evil rabbit using krita.          </Description>
         </ArtworkCard>
 
         <ArtworkCard
@@ -140,8 +139,7 @@ export default function Artwork() {
         >
           <ArtworkImage src="/digital-art3.jpg" alt="Digital Art 3" />
           <Description>
-            A vibrant abstract design created entirely in digital media.
-          </Description>
+A digital art of a hungry monkey using krita.          </Description>
         </ArtworkCard>
       </Grid>
 
@@ -155,7 +153,7 @@ export default function Artwork() {
         >
           <ArtworkImage src="/painting1.jpg" alt="Painting 1" />
           <Description>
-            Acrylic painting depicting a serene ocean landscape at sunset.
+            Acrylic painting of a plague doctor.
           </Description>
         </ArtworkCard>
 
@@ -166,8 +164,7 @@ export default function Artwork() {
         >
           <ArtworkImage src="/painting2.jpg" alt="Painting 2" />
           <Description>
-            Oil painting of a quiet forest trail covered in morning mist.
-          </Description>
+Acrylic painting of a spring breeze of kurdistan.          </Description>
         </ArtworkCard>
 
         <ArtworkCard
@@ -177,7 +174,7 @@ export default function Artwork() {
         >
           <ArtworkImage src="/painting3.jpg" alt="Painting 3" />
           <Description>
-            Watercolor painting capturing the peacefulness of a mountain lake.
+            Acrylic painting of a jester.
           </Description>
         </ArtworkCard>
       </Grid>

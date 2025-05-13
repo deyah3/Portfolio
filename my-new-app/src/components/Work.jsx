@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaHome } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // <-- Import navigate hook
+import { useNavigate } from 'react-router-dom';
 
 const WorkSection = styled.section`
   padding: 5rem 2rem;
@@ -39,7 +39,7 @@ const Heading = styled(motion.h2)`
 
 const BackButton = styled.button`
   display: inline-flex;
-  align-items: center; /* Fixed from 'left' */
+  align-items: center;
   margin-bottom: 2rem;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -78,7 +78,7 @@ const ProjectBox = styled.div`
   margin-top: 3rem;
   max-width: 800px;
   margin: 0 auto;
-  background-color:rgb(102, 102, 139);
+  background-color: rgb(102, 102, 139);
   padding: 2rem;
   border-radius: 15px;
   border: 3px dotted rgb(102, 144, 104);
@@ -101,6 +101,14 @@ const ProjectItem = styled.div`
   }
 `;
 
+const ImageGrid = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+`;
+
 const ProfileImage = styled.img`
   border-radius: 80%;
   width: 200px;
@@ -120,8 +128,16 @@ const ProfileImage = styled.img`
   }
 `;
 
+const ProjectImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid rgb(200, 240, 230);
+  box-shadow: 0 4px 20px rgba(131, 174, 195, 0.3);
+`;
+
 export default function Work() {
-  const navigate = useNavigate(); // Hook from React Router
+  const navigate = useNavigate();
 
   const goBack = () => {
     navigate('/');
@@ -149,45 +165,53 @@ export default function Work() {
       <ProjectBox>
         <h3>Freelance Work: Logo Design</h3>
         <p>Designed unique and meaningful logos tailored to client brand identity and goals.</p>
-        <br></br>
-        <div>
-          <ProfileImage src="/logo1.jpg " alt="Logo 1" /> 
-          <ProfileImage src="/logo2.jpg " alt="Logo 2" />
-          <ProfileImage src="/logo3.jpg " alt="Logo 3" />
-          <ProfileImage src="/logo4.jpg " alt="Logo 4" />
-          <ProfileImage src="/logo5.jpg " alt="Logo 5" />
-        </div>
+        <ImageGrid>
+          <ProfileImage src="/logo1.jpg" alt="Logo 1" />
+          <ProfileImage src="/logo2.jpg" alt="Logo 2" />
+          <ProfileImage src="/logo3.jpg" alt="Logo 3" />
+          <ProfileImage src="/logo4.jpg" alt="Logo 4" />
+          <ProfileImage src="/logo5.jpg" alt="Logo 5" />
+          <ProfileImage src="/logo6.jpg" alt="Logo 5" />
+        </ImageGrid>
       </ProjectBox>
-<br></br>
+
+      <br />
+        {/* Poster Design */}
+      <ProjectBox>
+        <h3>Internship: Poster Design</h3>
+        <p><strong>Duration:</strong> Mar 2025</p>
+        <p>Designed a creative educational poster for a robotics course, balancing modern design with a child-friendly aesthetic.</p>
+        <ImageGrid>
+          <ProjectImage src="/poster1.jpg" alt="Poster Project" />
+        </ImageGrid>
+      </ProjectBox>
+      <br></br>
+
+      {/* Capstone */}
+      <ProjectBox>
+        <h3>PalettePicker Website– Capstone Project</h3>
+        <p><strong>Duration:</strong> Sep 2024 – Dec 2024</p>
+        <p>Worked on a real-world website project. Learned website structure, design, and development best practices using Next.js, Tailwind and mongoDB.</p>
+        <ImageGrid>
+          <ProjectImage src="/capstone.jpg" alt="Capstone Screenshot" />
+        </ImageGrid>
+      </ProjectBox>
+
+     
+
     
-     <ProjectBox>
-  <h3>PalettePicker Website– Capstone Project</h3>
-  <p><strong>Duration:</strong> Jul 2023 – Aug 2023</p>
-  <p>Worked on a real-world mobile app project. Learned app structure, design, and development best practices using Flutter.</p>
-  <ImageGrid>
-    <ProjectImage src="/capstone.jpg" alt="Capstone Screenshot" />
-  </ImageGrid>
-</ProjectBox>
 
-<ProjectBox>
-  <h3>Internship: Poster Design</h3>
-  <p><strong>Duration:</strong> Mar 2024</p>
-  <p>Designed a creative educational poster for a robotics course, balancing modern design with a child-friendly aesthetic.</p>
-  <ImageGrid>
-    <ProjectImage src="/poster1.jpg" alt="Poster Project" />
-  </ImageGrid>
-</ProjectBox>
+      <br />
 
-<ProjectBox>
-  <h3>Internship: Website Development</h3>
-  <p><strong>Duration:</strong> Jul 2024 – Sep 2024</p>
-  <p>Built a fully functional website for a robotics course during my internship, using modern frontend and backend tools (React, Node.js, MySQL).</p>
-  <ImageGrid>
-    <ProjectImage src="/website1.jpg" alt="Website Project" />
-  </ImageGrid>
-</ProjectBox>
-
-  
+      {/* Website Development */}
+      <ProjectBox>
+        <h3>Internship: Website Development</h3>
+        <p><strong>Duration:</strong> Jul 2024 – Sep 2024</p>
+        <p>Built a fully functional website for a movie app during my internship, using modern frontend and backend tools (React, Node.js, MySQL).</p>
+        <ImageGrid>
+          <ProjectImage src="/website1.jpg" alt="Website Project" />
+        </ImageGrid>
+      </ProjectBox>
     </WorkSection>
   );
 }

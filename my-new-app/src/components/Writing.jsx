@@ -140,18 +140,66 @@ export default function Writing() {
       <SectionTitle>Poems</SectionTitle>
       {/* Poem 1 */}
       <PoemSection>
-        <h3>Poem Title 1</h3>
-        <p>"This is the first line of the poem.<br/>
-           This is the second line.<br/>
-           And here goes the third line, telling a story in rhythm."</p>
+        <h3>Hunger</h3>
+        <p>A poisonous fruit, I took a bite I liked it, I asked for more<br />
+There were no more to feed my hunger<br />
+No way of getting rid of my appetite<br />
+Soft it was, smoother than the surface<br />
+The table that I shared a meal on<br />
+I could sense the need for company<br />
+It took all of me, I lost my urge to eat<br />
+No more of it, I no longer needed it<br />
+I could live off of crumbs and bites<br />
+Got to a point I couldn't feel a thing<br />
+It was alright for a while, I even liked it<br />
+Time passed, days gone, nights came<br />
+The longer they got, the emptier I felt<br />
+The point of no return, I saw the issue<br />
+I needed to feel it again, the hunger strike<br />
+I went to the kitchen, looked around<br />
+Seemed like a foreign place, felt lost<br />
+Eventually found what I was looking for<br />
+It was right there for me, almost as if—<br />
+Almost as if it was waiting for me to take it<br />
+It was the case, or at least I believe it to be<br />
+I took it all in and at the last second, I saw—<br />
+I saw nothing but darkness. It worked.<br />
+</p>
       </PoemSection>
 
       {/* Poem 2 */}
       <PoemSection>
-        <h3>Poem Title 2</h3>
-        <p>"Another beautiful poem begins here,<br/>
-           Rhythmic words dancing on the page,<br/>
-           With meaning to uncover and ideas to engage."</p>
+        <h3>Reached Light</h3>
+        <p>There's a bright light that keeps appearing,<br />
+Its source unknown, its effect dreary.<br />
+It grows so strong one might go blind;<br />
+The more it shines, the harder to define.<br />
+Resonating in my head, waves create<br />
+Harmony, transcending into a myriad state.<br />
+It shapes and shifts, ceaselessly evolving,<br />
+Guiding seekers on paths revolving.<br />
+I grasp the light, embracing its sound,<br />
+Creating, forging, my purpose found.<br />
+Relief floods in, a long-lost friend,<br />
+I seize the source, reluctant to end.<br />
+Gripping tightly, nearly breaking,<br />
+Not fragile, just my hands quaking.<br />
+Fear and nausea draw near;<br />
+I step back, releasing fear.<br />
+Yet it returns, relentless and strong,<br />
+A magnet, pulling me along.<br />
+With understanding, hope ignites,<br />
+The light shines on, guiding my sights.<br />
+Better things are coming, I sense the dawn;<br />
+With open arms, I welcome them on.<br />
+</p>
+      </PoemSection>
+      <PoemSection>
+         <h3>Insect</h3>
+         <p>
+          There used to be in insect buzzing and panting in my room. I was looking for it in every corner, every part, I just couldn't trace it. It got to a point that I would get furious and think that it may be a fraction of my mind that makes such weird noises.
+There was disturbance, and tremendously intense noise that will not stop. It kept on going for a long time, eventually I got used to it and even got to the point that whenever I was back to the room, l'd be patiently waiting for the sound and then say "hey buddy, I'm home", I got so used to it that the sound was a way to alert me and keep in touch with my surrounding. It's been a year now and there is no more sound, the buzz, the shrink, the pant is no longer there, and I am still waiting for it to come back again, not because it sounded nice or anything, just merely because it had a presence in my room and kept my company.
+         </p>
       </PoemSection>
 
       {/* Add more poem sections as needed */}

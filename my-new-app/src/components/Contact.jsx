@@ -103,9 +103,9 @@ export default function Contact() {
         <Link href="https://www.linkedin.com/in/diya-mustafa-67a667251/" target="_blank" aria-label="LinkedIn">
           <FaLinkedin />
         </Link>
-        <Link href="https://instagram.com/yourartpage" target="_blank" aria-label="Instagram">
+        {/* <Link href="https://instagram.com/yourartpage" target="_blank" aria-label="Instagram">
           <FaInstagram />
-        </Link>
+        </Link> */}
       </Socials>
     </ContactSection>
   );
