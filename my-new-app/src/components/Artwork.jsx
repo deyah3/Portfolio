@@ -4,7 +4,7 @@ import React from 'react';
 export default function Artwork() {
   return (
     <div>
-      <h1>Artwork Page</h1>
+      <h1>Artwork Page Here</h1>
       <p>This is where you can display your artwork.</p>
     </div>
   );
