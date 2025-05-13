@@ -137,7 +137,7 @@ export default function AboutMe() {
       </Heading>
 
       <Description>
-        💻 Freshly grad Software Engineer with a degree in Business Administration (how cool is that!).
+        💻 Freshly grad Software Engineer with a minor in Business Administration (how cool is that!).
         <br />🎨 I turn wild ideas into web magic using code (sometimes), color, and creativity.
         <br />🧠 Forever curious, I constantly learn new skills and enjoy pushing boundaries through tech (I am a fast learner, I promise).
       </Description>
