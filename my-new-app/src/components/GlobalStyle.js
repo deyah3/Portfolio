@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto+Slab:wght@400;700&display=swap');
-
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-style: normal; /* prevent mobile fallback italics */
   }
 
   body {
     font-family: 'Roboto Slab', serif;
+    font-style: normal;
     background-color: #1e1f26;
     color: #eaeaea;
     line-height: 1.6;
