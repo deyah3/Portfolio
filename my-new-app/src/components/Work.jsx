@@ -178,7 +178,7 @@ export default function Work() {
       <br />
         {/* Poster Design */}
       <ProjectBox>
-        <h3>Internship: Poster Design</h3>
+        <h3>Course Trainer: Poster Design</h3>
         <p><strong>Duration:</strong> Mar 2025</p>
         <p>Designed a creative educational poster for a robotics course, balancing modern design with a child-friendly aesthetic.</p>
         <ImageGrid>
