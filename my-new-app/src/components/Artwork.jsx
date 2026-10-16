@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaHome, FaArrowUpRightFromSquare } from 'react-icons/fa';
+import { FaHome, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -88,7 +88,7 @@ const Title = styled(motion.h1)`
 
 const Intro = styled.p`
   max-width: 620px;
-  color: #a8a8ae;
+  color: #b8b8bd;
   font-size: 1.05rem;
   line-height: 1.9;
 `;
@@ -189,13 +189,14 @@ const ArtworkTitle = styled.h3`
 `;
 
 const Description = styled.p`
-  color: #99999f;
+  color: #a5a5ab;
   font-size: 0.88rem;
   line-height: 1.7;
   margin: 0;
 `;
 
 const ArtworkNumber = styled.span`
+  flex-shrink: 0;
   color: #77777d;
   font-size: 0.72rem;
   transition: color 0.25s ease;
@@ -235,7 +236,7 @@ const MoreTitle = styled.h2`
 
 const MoreDescription = styled.p`
   max-width: 680px;
-  color: #aaaab0;
+  color: #b8b8bd;
   line-height: 1.9;
   margin-bottom: 2rem;
 `;
@@ -268,6 +269,11 @@ const ContactLink = styled.a`
   &:hover {
     background: #e0c8a4;
     transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #f4f1eb;
+    outline-offset: 4px;
   }
 `;
 
@@ -302,7 +308,7 @@ const artworks = [
   },
   {
     image: '/painting2.jpg',
-    alt: 'Acrylic painting inspired by a spring breeze in Kurdistan',
+    alt: 'Acrylic painting inspired by spring in Kurdistan',
     title: 'Spring in Kurdistan',
     description: 'An acrylic painting inspired by the landscapes of Kurdistan.',
     number: '05',
@@ -371,7 +377,7 @@ export default function Artwork() {
       <Container>
         <TopBar>
           <BackButton to="/">
-            <FaHome />
+            <FaHome aria-hidden="true" />
             Back to Home
           </BackButton>
 
@@ -432,6 +438,9 @@ export default function Artwork() {
             portfolio is an ongoing collection, with more work
             being developed and added over time.
 
+            <br />
+            <br />
+
             I'm also open to freelance opportunities and
             collaborations. If you have a project in mind,
             I'd love to hear about it.
@@ -444,9 +453,9 @@ export default function Artwork() {
             <Tag>Freelance Projects</Tag>
           </Tags>
 
-          <ContactLink href="mailto:YOUR_EMAIL@example.com">
+          <ContactLink href="mailto:diya.hoshyar3@gmail.com">
             Let's work together
-            <FaArrowUpRightFromSquare />
+            <FaExternalLinkAlt aria-hidden="true" />
           </ContactLink>
         </MoreWork>
       </Container>
