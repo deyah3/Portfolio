@@ -507,7 +507,7 @@ export default function Work() {
             thoughtful design and meaningful ideas.
           </MoreDescription>
 
-          <ContactLink href="mailto:YOUR_EMAIL@example.com">
+          <ContactLink href="diya.hoshyar3@gmail.com">
             Let's work together
             <FaExternalLinkAlt aria-hidden="true" />
           </ContactLink>
