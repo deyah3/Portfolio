@@ -112,68 +112,45 @@ export default function AboutMe() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          A mind for technology,
+          An artist’s eye,
           <br />
-          an eye for <span>design.</span>
+          always <span>observing.</span>
         </Heading>
 
         <Content>
           <Description>
-            <p>
-              Hello! I'm a <strong>Software Engineering graduate
-              with a minor in Business Administration</strong>,
-              interested in the intersection of technology,
-              creativity, and problem-solving.
-            </p>
-
-            <p>
-              I currently work as a <strong>Designer and Sample
-              Maker at a packaging factory</strong>, where I bring
-              ideas to life through visual design and packaging
-              development.
-            </p>
-
-            <p>
-              My background combines creative work with a
-              foundation in software engineering. While design
-              allows me to explore the visual side of problem-solving,
-              I continue to develop my technical skills and
-              explore new possibilities in technology.
-            </p>
-
-            <p>
-              I'm curious by nature, enjoy learning through
-              experience, and believe that the best work happens
-              when creativity meets logical thinking.
-            </p>
+            <p>Hello! I’m an <strong>artist and visual storyteller</strong> drawn to the way images, materials, and ideas can express what words sometimes cannot.</p>
+            <p>My creative practice moves between <strong>traditional and digital art, illustration, and visual design</strong>. I enjoy exploring different techniques and letting each project find its own visual language.</p>
+            <p>I’m interested in the relationship between structure and spontaneity, and in how color, composition, and detail can shape a viewer’s experience.</p>
+            <p>I see every piece as part of a larger conversation: a chance to experiment, learn, and make something honest.</p>
           </Description>
 
           <Details>
             <Detail>
               <div className="label">Currently</div>
               <div className="value">
-                Designer & Sample Maker
+                Artist & Illustrator
               </div>
             </Detail>
 
             <Detail>
               <div className="label">Industry</div>
               <div className="value">
-                Packaging & Design
+                Art & Visual Storytelling
               </div>
             </Detail>
 
             <Detail>
               <div className="label">Education</div>
               <div className="value">
-                Software Engineering
+                Traditional & Digital Art
               </div>
             </Detail>
 
             <Detail>
               <div className="label">Also interested in</div>
               <div className="value">
-                Technology & Development
+                Writing & Experimentation
               </div>
             </Detail>
           </Details>
