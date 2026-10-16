@@ -94,7 +94,7 @@ export default function Contact() {
       >
         Get in Touch
       </Heading>
-      <Info>Email: diyahushiyar@gmail.com</Info>
+      <Info>Email: diya.hoshyar3@gmail.com</Info>
       <Quote>"Every journey begins with a single ping."</Quote>
       <Socials>
         <Link href="https://github.com/deyah3" target="_blank" aria-label="GitHub">
