@@ -1,4 +1,4 @@
-
+```jsx
 import React from 'react';
 import styled from 'styled-components';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -7,16 +7,59 @@ import {
   FaLinkedin,
   FaEnvelope,
   FaArrowRight,
-  FaCode,
   FaLaptopCode,
 } from 'react-icons/fa';
 
+const C = {
+  bg: '#171a16',
+  panel: '#20251e',
+  green: '#9ca889',
+  greenLight: '#c0c9ad',
+  greenDark: '#626f56',
+  parchment: '#e9e4d5',
+  muted: '#b6b9ad',
+  border: '#41483a',
+};
+
 const ContactSection = styled.section`
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   padding: 2rem clamp(1.25rem, 5vw, 5rem) 5rem;
-  background: #101114;
-  color: #f4f1eb;
+  background:
+    radial-gradient(ellipse at 5% 15%, rgba(156, 168, 137, 0.09), transparent 36%),
+    radial-gradient(ellipse at 95% 75%, rgba(98, 111, 86, 0.12), transparent 35%),
+    ${C.bg};
+  color: ${C.parchment};
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 330px;
+    height: 330px;
+    top: 15%;
+    right: -210px;
+    border: 1px solid rgba(192, 201, 173, 0.15);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 28px rgba(192, 201, 173, 0.025),
+      0 0 0 56px rgba(192, 201, 173, 0.025);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    bottom: 6%;
+    left: -120px;
+    border: 1px solid rgba(156, 168, 137, 0.18);
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
 `;
 
 const Container = styled.div`
@@ -30,22 +73,39 @@ const TopLine = styled.div`
   align-items: center;
   gap: 1rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #343439;
+  border-bottom: 1px solid ${C.border};
 
   span {
-    color: #85858c;
+    color: ${C.green};
     font-size: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+
+  @media (max-width: 560px) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
 `;
 
 const Eyebrow = styled.p`
-  color: #c6a77b;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: ${C.greenLight};
   font-size: 0.72rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: ${C.green};
+  }
 `;
 
 const Hero = styled.div`
@@ -63,7 +123,7 @@ const Heading = styled(motion.h1)`
 
   span {
     display: block;
-    color: #c6a77b;
+    color: ${C.green};
     font-style: italic;
   }
 
@@ -74,7 +134,7 @@ const Heading = styled(motion.h1)`
 
 const Intro = styled.p`
   max-width: 680px;
-  color: #b8b8bd;
+  color: ${C.muted};
   font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.95;
 `;
@@ -84,24 +144,32 @@ const Status = styled.div`
   align-items: center;
   gap: 0.7rem;
   margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid #41413a;
-  color: #ded8cf;
+  padding: 0.8rem 1rem;
+  border: 1px solid ${C.border};
+  color: ${C.parchment};
   font-size: 0.82rem;
-  background: rgba(198, 167, 123, 0.05);
+  line-height: 1.7;
+  background: rgba(156, 168, 137, 0.07);
+  max-width: 100%;
 `;
 
 const StatusDot = styled.span`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #c6a77b;
+  background: ${C.greenLight};
   flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(156, 168, 137, 0.12);
 `;
 
 const Divider = styled.div`
   height: 1px;
-  background: #343439;
+  background: linear-gradient(
+    90deg,
+    ${C.greenDark},
+    ${C.border} 45%,
+    transparent
+  );
   margin: 1rem 0 4rem;
 `;
 
@@ -124,13 +192,13 @@ const Subheading = styled.h2`
   margin: 0 0 1.25rem;
 
   span {
-    color: #c6a77b;
+    color: ${C.green};
     font-style: italic;
   }
 `;
 
 const BodyText = styled.p`
-  color: #a9a9b0;
+  color: ${C.muted};
   line-height: 1.9;
   margin: 0 0 1.5rem;
   font-size: 0.95rem;
@@ -142,19 +210,20 @@ const EmailCard = styled.a`
   gap: 1rem;
   margin-top: 2rem;
   padding: 1.25rem;
-  border: 1px solid #3a3835;
-  color: #f4f1eb;
+  border: 1px solid ${C.border};
+  background: rgba(156, 168, 137, 0.035);
+  color: ${C.parchment};
   text-decoration: none;
   overflow-wrap: anywhere;
   transition: border-color 0.25s ease, background 0.25s ease;
 
   &:hover {
-    border-color: #c6a77b;
-    background: rgba(198, 167, 123, 0.05);
+    border-color: ${C.green};
+    background: rgba(156, 168, 137, 0.09);
   }
 
   &:focus-visible {
-    outline: 2px solid #c6a77b;
+    outline: 2px solid ${C.greenLight};
     outline-offset: 4px;
   }
 `;
@@ -166,8 +235,9 @@ const EmailIcon = styled.div`
   width: 46px;
   height: 46px;
   flex-shrink: 0;
-  color: #c6a77b;
-  border: 1px solid #454147;
+  color: ${C.greenLight};
+  border: 1px solid ${C.greenDark};
+  background: rgba(156, 168, 137, 0.08);
   font-size: 1.1rem;
 `;
 
@@ -177,7 +247,7 @@ const EmailContent = styled.div`
 
   small {
     display: block;
-    color: #85858c;
+    color: ${C.green};
     font-size: 0.7rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -187,11 +257,12 @@ const EmailContent = styled.div`
   strong {
     font-size: 0.9rem;
     font-weight: 400;
+    overflow-wrap: anywhere;
   }
 `;
 
 const Arrow = styled(FaArrowRight)`
-  color: #c6a77b;
+  color: ${C.greenLight};
   flex-shrink: 0;
   transition: transform 0.25s ease;
 
@@ -205,7 +276,7 @@ const SocialHeading = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #85858c;
+  color: ${C.green};
   margin: 2.5rem 0 1rem;
 `;
 
@@ -220,38 +291,56 @@ const SocialLink = styled.a`
   align-items: center;
   gap: 0.7rem;
   padding: 0.9rem 1rem;
-  border: 1px solid #3a3835;
-  color: #ded8cf;
+  border: 1px solid ${C.border};
+  background: rgba(156, 168, 137, 0.025);
+  color: ${C.parchment};
   text-decoration: none;
   font-size: 0.85rem;
-  transition: border-color 0.25s ease, color 0.25s ease;
+  transition: border-color 0.25s ease, color 0.25s ease,
+    background 0.25s ease;
 
   svg {
-    color: #c6a77b;
+    color: ${C.greenLight};
     font-size: 1.05rem;
   }
 
   &:hover {
-    border-color: #c6a77b;
+    border-color: ${C.green};
+    background: rgba(156, 168, 137, 0.09);
     color: #fff;
   }
 
   &:focus-visible {
-    outline: 2px solid #c6a77b;
+    outline: 2px solid ${C.greenLight};
     outline-offset: 4px;
   }
 `;
 
 const ProfileCard = styled(motion.aside)`
+  position: relative;
+  overflow: hidden;
   padding: clamp(1.5rem, 4vw, 2.5rem);
   background:
     radial-gradient(
       ellipse at top right,
-      rgba(198, 167, 123, 0.1),
+      rgba(156, 168, 137, 0.13),
       transparent 60%
     ),
-    #17171b;
-  border: 1px solid #343439;
+    ${C.panel};
+  border: 1px solid ${C.border};
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: -75px;
+    bottom: -75px;
+    border: 1px solid rgba(192, 201, 173, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 0 18px rgba(192, 201, 173, 0.025);
+    pointer-events: none;
+  }
 `;
 
 const ProfileIcon = styled.div`
@@ -261,8 +350,9 @@ const ProfileIcon = styled.div`
   width: 56px;
   height: 56px;
   margin-bottom: 2rem;
-  color: #c6a77b;
-  border: 1px solid #514738;
+  color: ${C.greenLight};
+  border: 1px solid ${C.greenDark};
+  background: rgba(156, 168, 137, 0.08);
   font-size: 1.4rem;
 `;
 
@@ -270,11 +360,16 @@ const ProfileTitle = styled.h3`
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.8rem;
   font-weight: 400;
+  line-height: 1.35;
   margin: 0 0 1rem;
+
+  br + * {
+    color: ${C.greenLight};
+  }
 `;
 
 const ProfileDescription = styled.p`
-  color: #aaaab1;
+  color: ${C.muted};
   font-size: 0.9rem;
   line-height: 1.9;
   margin: 0 0 1.5rem;
@@ -288,9 +383,16 @@ const SkillList = styled.div`
 
 const Skill = styled.span`
   padding: 0.6rem 0.75rem;
-  border: 1px solid #414147;
-  color: #ded8cf;
+  border: 1px solid ${C.border};
+  background: rgba(156, 168, 137, 0.045);
+  color: ${C.greenLight};
   font-size: 0.75rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: ${C.green};
+    background: rgba(156, 168, 137, 0.12);
+  }
 `;
 
 const Footer = styled.footer`
@@ -301,17 +403,17 @@ const Footer = styled.footer`
   flex-wrap: wrap;
   margin-top: 6rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #343439;
+  border-top: 1px solid ${C.border};
 
   p {
-    color: #85858c;
+    color: ${C.muted};
     font-size: 0.78rem;
     line-height: 1.8;
     margin: 0;
   }
 
   span {
-    color: #c6a77b;
+    color: ${C.greenLight};
   }
 `;
 
@@ -455,3 +557,4 @@ export default function Contact() {
     </ContactSection>
   );
 }
+```
