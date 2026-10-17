@@ -129,21 +129,21 @@ export default function AboutMe() {
             <Detail>
               <div className="label">Currently</div>
               <div className="value">
-                Artist & Illustrator
+                Product Designer
               </div>
             </Detail>
 
             <Detail>
               <div className="label">Industry</div>
               <div className="value">
-                Art & Visual Storytelling
+                Design and Tech 
               </div>
             </Detail>
 
             <Detail>
               <div className="label">Education</div>
               <div className="value">
-                Traditional & Digital Art
+                Software Engineering
               </div>
             </Detail>
 
