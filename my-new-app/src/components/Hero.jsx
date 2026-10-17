@@ -1,20 +1,31 @@
-// src/components/Hero.jsx
+
+ // src/components/Hero.jsx
 import styled, { keyframes } from "styled-components";
 import SpiralSVG from "./SpiralSVG";
-import { BaseSection, SectionTitle, SubTitle, Button } from './SectionStyles';  // Importing styles from SectionStyles.js
-
 
 const float = keyframes`
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 `;
 
 const HeroSection = styled.section`
   position: relative;
-  height: 100vh;
-  background: radial-gradient(circle at 30% 30%, #3a2a6f, #1e1e2f);
-  color: white;
+  min-height: 95vh;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(166, 160, 120, 0.10),
+      transparent 55%
+    ),
+    #101114;
+  color: #f4f1eb;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,33 +35,60 @@ const HeroSection = styled.section`
 
 const SpiralBackground = styled.div`
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   z-index: 0;
-  opacity: 0.2;
-  animation: ${float} 5s ease-in-out infinite;
+  opacity: 0.22;
+  animation: ${float} 8s ease-in-out infinite;
+  pointer-events: none;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 const HeroContent = styled.div`
+  position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  padding: 2rem;
   text-align: center;
 `;
 
 const Title = styled.h1`
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 4rem;
-  letter-spacing: 3px;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+  color: #f4f1eb;
+
+  span {
+    color: #a6a078;
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    letter-spacing: -0.5px;
+  }
 `;
 
 const Subtitle = styled.p`
-  font-family: 'Courier New', monospace;
-  font-size: 1.2rem;
+  font-family: "Courier New", monospace;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  color: #c6a77b;
+  margin: 0;
 `;
 
 export default function Hero() {
@@ -59,11 +97,16 @@ export default function Hero() {
       <SpiralBackground>
         <SpiralSVG />
       </SpiralBackground>
+
       <HeroContent>
-        <Title>Diya's Spiraling Portfolio</Title>
-        <Subtitle>Software Engineer, Designer & Creator</Subtitle>
+        <Title>
+          Diya's Spiraling <span>Portfolio</span>
+        </Title>
+
+        <Subtitle>
+          Software Engineer, Designer &amp; Creator
+        </Subtitle>
       </HeroContent>
     </HeroSection>
   );
 }
-
