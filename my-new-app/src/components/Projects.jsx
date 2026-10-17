@@ -4,13 +4,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
+
 import {
-  FaArrowUpRightFromSquare,
+  FaExternalLinkAlt,
   FaFeatherAlt,
   FaPalette,
   FaShapes,
 } from "react-icons/fa";
-
 /* ---------- SECTION ---------- */
 
 const Section = styled.section`
