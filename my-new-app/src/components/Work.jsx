@@ -718,7 +718,7 @@ export default function Work() {
 
             <ProjectImageArea>
               <ProjectImage
-                src="/poster1.jpg"
+                src="/poster1.jpeg"
                 alt="Educational robotics course poster"
                 loading="lazy"
               />
