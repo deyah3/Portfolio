@@ -776,7 +776,7 @@ export default function Work() {
 
             <ProjectImageArea>
               <ProjectImage
-                src="/website1.jpg"
+                src="/website1.png"
                 alt="Movie application website project"
                 loading="lazy"
               />
