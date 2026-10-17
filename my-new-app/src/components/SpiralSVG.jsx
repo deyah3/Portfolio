@@ -50,4 +50,3 @@ const SpiralSVG = () => (
 );
 
 export default SpiralSVG;
-```
