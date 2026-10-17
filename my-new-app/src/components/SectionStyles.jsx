@@ -14,7 +14,7 @@ export const BaseSection = styled.section`
 export const SectionTitle = styled.h2`
   font-size: 2.5rem;
   letter-spacing: 2px;
-  background: linear-gradient(to right, #00e5ff, #18ffff);
+  background: linear-gradient(to right, #959d90, #a39c82);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
