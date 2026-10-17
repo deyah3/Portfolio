@@ -34,7 +34,7 @@ export const Button = styled.a`
   margin-top: 1.5rem;
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
-  background: linear-gradient(to right, #00e5ff, #18ffff);
+  background: linear-gradient(to right, #334025, #a39c82);
   color: #fff;
   text-decoration: none;
   font-weight: bold;
