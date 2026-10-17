@@ -17,26 +17,22 @@ const HeroSection = styled.section`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  color: #eeeee4;
 
+  /* Dark charcoal-olive at the bottom, muted khaki at the top */
   background:
     radial-gradient(
-      ellipse at 15% 20%,
-      rgba(193, 200, 178, 0.5),
-      transparent 45%
-    ),
-    radial-gradient(
-      ellipse at 85% 75%,
-      rgba(125, 140, 112, 0.22),
-      transparent 48%
+      ellipse at 50% 25%,
+      rgba(166, 178, 151, 0.12),
+      transparent 55%
     ),
     linear-gradient(
-      135deg,
-      #b8c0ae 0%,
-      #aab49d 48%,
-      #c0c5b5 100%
+      to bottom,
+      #939e87 0%,
+      #69765e 30%,
+      #3d4938 65%,
+      #20271f 100%
     );
-
-  color: #252b24;
 
   &::before {
     content: "";
@@ -44,16 +40,15 @@ const HeroSection = styled.section`
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.18;
+    opacity: 0.16;
     background-image: radial-gradient(
-      rgba(47, 57, 44, 0.4) 0.6px,
+      rgba(224, 228, 211, 0.55) 0.6px,
       transparent 0.6px
     );
     background-size: 7px 7px;
     mask-image: linear-gradient(
-      135deg,
-      transparent 5%,
-      black 50%,
+      to bottom,
+      black,
       transparent 95%
     );
   }
@@ -64,7 +59,7 @@ const HeroSection = styled.section`
     z-index: -1;
     width: min(72vw, 850px);
     aspect-ratio: 1;
-    border: 1px solid rgba(56, 68, 52, 0.2);
+    border: 1px solid rgba(204, 212, 190, 0.17);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -81,7 +76,7 @@ const SpiralBackground = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.38;
   animation: ${float} 12s ease-in-out infinite;
   pointer-events: none;
 
@@ -92,7 +87,7 @@ const SpiralBackground = styled.div`
   }
 
   @media (max-width: 600px) {
-    opacity: 0.3;
+    opacity: 0.28;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -112,7 +107,7 @@ const HeroContent = styled.div`
     content: "DESIGN / TECHNOLOGY / EXPRESSION";
     display: block;
     margin-bottom: 2rem;
-    color: #465443;
+    color: #d0d7c3;
     font-family: "Courier New", monospace;
     font-size: 0.68rem;
     letter-spacing: 0.22em;
@@ -131,11 +126,11 @@ const Title = styled.h1`
   font-weight: 400;
   letter-spacing: -0.065em;
   line-height: 1.06;
-  color: #252b24;
+  color: #f0f0e7;
 
   span {
     display: inline-block;
-    color: #586b52;
+    color: #c0c9ad;
     font-style: italic;
     font-weight: 400;
   }
@@ -149,12 +144,12 @@ const Divider = styled.div`
   width: 58px;
   height: 1px;
   margin: 2rem auto;
-  background: #65745d;
+  background: #c0c9ad;
 `;
 
 const Subtitle = styled.p`
   margin: 0;
-  color: #394537;
+  color: #d3d8c9;
   font-family: "Courier New", monospace;
   font-size: clamp(0.75rem, 1.5vw, 0.95rem);
   letter-spacing: 0.13em;
@@ -170,7 +165,7 @@ const CornerLabel = styled.div`
   position: absolute;
   right: clamp(1rem, 4vw, 3rem);
   bottom: 2rem;
-  color: #4c5948;
+  color: #b6c0a8;
   font-family: "Courier New", monospace;
   font-size: 0.65rem;
   letter-spacing: 0.14em;
