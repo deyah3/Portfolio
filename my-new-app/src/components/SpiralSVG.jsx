@@ -1,5 +1,4 @@
-```jsx
-// src/components/SpiralSVG.jsx
+//src/components/SpiralSVG.jsx
 import React from "react";
 
 const SpiralSVG = () => (
