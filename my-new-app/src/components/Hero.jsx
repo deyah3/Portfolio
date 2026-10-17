@@ -1,15 +1,10 @@
 
- // src/components/Hero.jsx
 import styled, { keyframes } from "styled-components";
 import SpiralSVG from "./SpiralSVG";
 
 const float = keyframes`
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.015);
-  }
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.015); }
 `;
 
 const HeroSection = styled.section`
@@ -17,29 +12,31 @@ const HeroSection = styled.section`
   isolation: isolate;
   min-height: 95vh;
   padding: 5rem 1.5rem;
-  background:
-    radial-gradient(
-      ellipse at 15% 20%,
-      rgba(240, 237, 223, 0.85),
-      transparent 42%
-    ),
-    radial-gradient(
-      ellipse at 85% 75%,
-      rgba(182, 179, 151, 0.65),
-      transparent 45%
-    ),
-    linear-gradient(
-      135deg,
-      #d9ddcb 0%,
-      #bfc8ae 45%,
-      #d8d2b9 100%
-    );
-  color: #252a21;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(193, 200, 178, 0.5),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 75%,
+      rgba(125, 140, 112, 0.22),
+      transparent 48%
+    ),
+    linear-gradient(
+      135deg,
+      #b8c0ae 0%,
+      #aab49d 48%,
+      #c0c5b5 100%
+    );
+
+  color: #252b24;
 
   &::before {
     content: "";
@@ -47,12 +44,12 @@ const HeroSection = styled.section`
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.22;
+    opacity: 0.18;
     background-image: radial-gradient(
-      rgba(58, 65, 48, 0.35) 0.65px,
-      transparent 0.65px
+      rgba(47, 57, 44, 0.4) 0.6px,
+      transparent 0.6px
     );
-    background-size: 6px 6px;
+    background-size: 7px 7px;
     mask-image: linear-gradient(
       135deg,
       transparent 5%,
@@ -67,7 +64,7 @@ const HeroSection = styled.section`
     z-index: -1;
     width: min(72vw, 850px);
     aspect-ratio: 1;
-    border: 1px solid rgba(83, 94, 70, 0.16);
+    border: 1px solid rgba(56, 68, 52, 0.2);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -75,13 +72,6 @@ const HeroSection = styled.section`
   @media (max-width: 600px) {
     min-height: 82vh;
     padding: 4rem 1rem;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &::before,
-    &::after {
-      animation: none;
-    }
   }
 `;
 
@@ -91,7 +81,7 @@ const SpiralBackground = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.48;
+  opacity: 0.4;
   animation: ${float} 12s ease-in-out infinite;
   pointer-events: none;
 
@@ -102,7 +92,7 @@ const SpiralBackground = styled.div`
   }
 
   @media (max-width: 600px) {
-    opacity: 0.34;
+    opacity: 0.3;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -119,13 +109,13 @@ const HeroContent = styled.div`
   text-align: center;
 
   &::before {
-    content: "DESIGN  /  TECHNOLOGY  /  EXPRESSION";
+    content: "DESIGN / TECHNOLOGY / EXPRESSION";
     display: block;
     margin-bottom: 2rem;
-    color: #59664d;
+    color: #465443;
     font-family: "Courier New", monospace;
     font-size: 0.68rem;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.22em;
   }
 
   @media (max-width: 600px) {
@@ -141,11 +131,11 @@ const Title = styled.h1`
   font-weight: 400;
   letter-spacing: -0.065em;
   line-height: 1.06;
-  color: #252a21;
+  color: #252b24;
 
   span {
     display: inline-block;
-    color: #66745a;
+    color: #586b52;
     font-style: italic;
     font-weight: 400;
   }
@@ -159,12 +149,12 @@ const Divider = styled.div`
   width: 58px;
   height: 1px;
   margin: 2rem auto;
-  background: #7d8669;
+  background: #65745d;
 `;
 
 const Subtitle = styled.p`
   margin: 0;
-  color: #424b39;
+  color: #394537;
   font-family: "Courier New", monospace;
   font-size: clamp(0.75rem, 1.5vw, 0.95rem);
   letter-spacing: 0.13em;
@@ -180,7 +170,7 @@ const CornerLabel = styled.div`
   position: absolute;
   right: clamp(1rem, 4vw, 3rem);
   bottom: 2rem;
-  color: rgba(48, 57, 42, 0.7);
+  color: #4c5948;
   font-family: "Courier New", monospace;
   font-size: 0.65rem;
   letter-spacing: 0.14em;
