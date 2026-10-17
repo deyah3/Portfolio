@@ -530,28 +530,28 @@ const ContactLink = styled.a`
 
 const books = [
   {
-    image: "/book1.jpg",
+    image: "/book1.jpeg",
     number: "01",
     label: "Book Cover Design",
-    title: "Book Design One",
+    title: "Family Upbringing",
     description:
-      "A book cover concept exploring composition, typography, and visual storytelling.",
+      "A book cover concept exploring family dynamics and education within family written by an educator.",
   },
   {
-    image: "/book2.jpg",
+    image: "/book2.jpeg",
     number: "02",
     label: "Book Cover Design",
-    title: "Book Design Two",
+    title: "The World Was Never Ours",
     description:
-      "A different visual direction shaped by mood, color, and carefully considered details.",
+      "A different visual direction shaped by imagination and fantasy, telling the tale of 3 siblings, written by an aspiring young writer.",
   },
   {
     image: "/book3.jpg",
     number: "03",
     label: "Book Cover Design",
-    title: "Book Design Three",
+    title: "Simple Days",
     description:
-      "An independent cover design study bringing together imagery and editorial design.",
+      "An independent cover design for a mini autobiography for a strong, female kurdish writer.",
   },
 ];
 
