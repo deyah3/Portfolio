@@ -24,7 +24,7 @@ const SpiralSVG = () => (
          a10,10 0 1,0 20,0
          a10,10 0 1,0 -20,0"
       fill="none"
-      stroke="#ff6ec4"
+      stroke="#d4af37"
       strokeWidth="0.5"
     />
   </svg>
