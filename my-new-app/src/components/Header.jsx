@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const HeaderBar = styled.header`
   width: 100%;
   padding: 1rem 2rem;
-  background:rgb(158, 155, 207);
+  background:rgb(126, 128, 93);
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
