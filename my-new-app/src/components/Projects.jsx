@@ -1,5 +1,4 @@
 
- // src/components/Projects.jsx
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -11,6 +10,7 @@ import {
   FaPalette,
   FaShapes,
 } from "react-icons/fa";
+
 /* ---------- SECTION ---------- */
 
 const Section = styled.section`
@@ -160,6 +160,7 @@ const DecorativeLine = styled.div`
     color: #a6a078;
     font-size: 0.7rem;
     letter-spacing: 3px;
+    white-space: nowrap;
   }
 `;
 
@@ -281,6 +282,7 @@ const Category = styled.p`
 
   svg {
     font-size: 0.85rem;
+    flex-shrink: 0;
   }
 `;
 
@@ -309,6 +311,11 @@ const CardFooter = styled.div`
   gap: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #35352e;
+
+  @media (max-width: 400px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `;
 
 const CardIndex = styled.span`
@@ -325,6 +332,7 @@ const ProjectLink = styled(Link)`
   font-size: 0.82rem;
   text-decoration: none;
   transition: color 0.25s ease;
+  white-space: nowrap;
 
   svg {
     transition: transform 0.25s ease;
@@ -361,10 +369,12 @@ const FooterNote = styled(motion.div)`
   svg {
     color: #a6a078;
     font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
   @media (max-width: 500px) {
     line-height: 1.8;
+    gap: 0.65rem;
   }
 `;
 
@@ -455,14 +465,19 @@ export default function Projects() {
             const Icon = project.Icon;
 
             return (
-              <Card key={project.number} {...reveal(index * 0.14)}>
+              <Card
+                key={project.number}
+                {...reveal(index * 0.14)}
+              >
                 <ImageFrame>
                   <img
                     src={project.image}
                     alt={project.alt}
                     loading="lazy"
                   />
-                  <ImageNumber>{project.number}</ImageNumber>
+                  <ImageNumber>
+                    {project.number}
+                  </ImageNumber>
                 </ImageFrame>
 
                 <CardContent>
@@ -484,7 +499,7 @@ export default function Projects() {
 
                     <ProjectLink to={project.link}>
                       {project.linkText}
-                      <FaArrowUpRightFromSquare
+                      <FaExternalLinkAlt
                         aria-hidden="true"
                       />
                     </ProjectLink>
@@ -497,7 +512,9 @@ export default function Projects() {
 
         <FooterNote {...reveal(0.2)}>
           <FaShapes aria-hidden="true" />
-          <span>Made with curiosity, patience, and intention.</span>
+          <span>
+            Made with curiosity, patience, and intention.
+          </span>
           <FaShapes aria-hidden="true" />
         </FooterNote>
       </Container>
