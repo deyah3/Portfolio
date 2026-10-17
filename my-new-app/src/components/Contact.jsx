@@ -1,4 +1,3 @@
-```jsx
 import React from 'react';
 import styled from 'styled-components';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -25,11 +24,8 @@ const ContactSection = styled.section`
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 2rem clamp(1.25rem, 5vw, 5rem) 5rem;
-  background:
-    radial-gradient(ellipse at 5% 15%, rgba(156, 168, 137, 0.09), transparent 36%),
-    radial-gradient(ellipse at 95% 75%, rgba(98, 111, 86, 0.12), transparent 35%),
-    ${C.bg};
+  padding: 2rem 5vw 5rem;
+  background: ${C.bg};
   color: ${C.parchment};
 
   &::before {
@@ -59,6 +55,11 @@ const ContactSection = styled.section`
     border: 1px solid rgba(156, 168, 137, 0.18);
     transform: rotate(45deg);
     pointer-events: none;
+  }
+
+  @media (min-width: 1600px) {
+    padding-right: max(5vw, calc((100vw - 1400px) / 2));
+    padding-left: max(5vw, calc((100vw - 1400px) / 2));
   }
 `;
 
@@ -109,13 +110,17 @@ const Eyebrow = styled.p`
 `;
 
 const Hero = styled.div`
-  padding: clamp(4rem, 10vw, 8rem) 0 4rem;
+  padding: 7rem 0 4rem;
   max-width: 900px;
+
+  @media (max-width: 700px) {
+    padding-top: 4.5rem;
+  }
 `;
 
 const Heading = styled(motion.h1)`
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(3.2rem, 9vw, 7rem);
+  font-size: clamp(3rem, 9vw, 7rem);
   line-height: 1.04;
   font-weight: 400;
   letter-spacing: -3px;
@@ -142,7 +147,7 @@ const Intro = styled.p`
 const Status = styled.div`
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.8rem;
   margin-top: 1.5rem;
   padding: 0.8rem 1rem;
   border: 1px solid ${C.border};
@@ -176,11 +181,15 @@ const Divider = styled.div`
 const ContentGrid = styled.div`
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
-  gap: clamp(2rem, 6vw, 6rem);
+  gap: 4rem;
   align-items: start;
 
+  @media (max-width: 900px) {
+    gap: 2.5rem;
+  }
+
   @media (max-width: 760px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 `;
 
@@ -296,7 +305,9 @@ const SocialLink = styled.a`
   color: ${C.parchment};
   text-decoration: none;
   font-size: 0.85rem;
-  transition: border-color 0.25s ease, color 0.25s ease,
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
     background 0.25s ease;
 
   svg {
@@ -319,7 +330,7 @@ const SocialLink = styled.a`
 const ProfileCard = styled(motion.aside)`
   position: relative;
   overflow: hidden;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  padding: 2.5rem;
   background:
     radial-gradient(
       ellipse at top right,
@@ -340,6 +351,10 @@ const ProfileCard = styled(motion.aside)`
     border-radius: 50%;
     box-shadow: 0 0 0 18px rgba(192, 201, 173, 0.025);
     pointer-events: none;
+  }
+
+  @media (max-width: 500px) {
+    padding: 1.5rem;
   }
 `;
 
@@ -363,8 +378,9 @@ const ProfileTitle = styled.h3`
   line-height: 1.35;
   margin: 0 0 1rem;
 
-  br + * {
+  span {
     color: ${C.greenLight};
+    font-style: italic;
   }
 `;
 
@@ -446,10 +462,9 @@ export default function Contact() {
             designer and sample maker in a packaging factory.
             I'm looking to grow into the tech industry, apply my
             technical foundation, and keep developing my skills
-            through practical experience.
-
-            I'd love to connect with teams looking for a curious,
-            creative, and motivated junior candidate.
+            through practical experience. I'd love to connect
+            with teams looking for a curious, creative, and
+            motivated junior candidate.
           </Intro>
 
           <Status>
@@ -525,7 +540,7 @@ export default function Contact() {
             <ProfileTitle>
               A creative mindset.
               <br />
-              A technical direction.
+              <span>A technical direction.</span>
             </ProfileTitle>
 
             <ProfileDescription>
@@ -557,4 +572,3 @@ export default function Contact() {
     </ContactSection>
   );
 }
-```
