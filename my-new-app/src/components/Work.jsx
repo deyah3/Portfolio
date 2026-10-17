@@ -532,7 +532,7 @@ const books = [
   {
     image: "/book1.jpeg",
     number: "01",
-    label: "Book Cover Design",
+    label: "Education",
     title: "Family Upbringing",
     description:
       "A book cover concept exploring family dynamics and education within family written by an educator.",
@@ -540,7 +540,7 @@ const books = [
   {
     image: "/book2.jpeg",
     number: "02",
-    label: "Book Cover Design",
+    label: "Sci-fi",
     title: "The World Was Never Ours",
     description:
       "A different visual direction shaped by imagination and fantasy, telling the tale of 3 siblings, written by an aspiring young writer.",
@@ -548,7 +548,7 @@ const books = [
   {
     image: "/book3.jpg",
     number: "03",
-    label: "Book Cover Design",
+    label: "Memoir",
     title: "Simple Days",
     description:
       "An independent cover design for a mini autobiography for a strong, female kurdish writer.",
