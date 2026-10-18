@@ -9,30 +9,21 @@ npm install
 npm run dev
 ```
 
-## Deploying to Plesk
+## Deploying to Plesk (Node.js)
 
-The site builds to plain static files, so no Node.js is needed on the server.
+`server.cjs` is a small Node server (no extra packages) that serves the built site from `dist/` and sends every page route (`/work`, `/artwork`, `/writing`) to the React app.
 
-1. Build and zip:
-   ```bash
-   npm run build:plesk
-   ```
-   This creates `dist/` and `portfolio-plesk.zip`.
-2. In Plesk, open **Websites & Domains → your domain → File Manager**, go to `httpdocs/`, and delete the default Plesk files (`index.html`, `css/`, `img/`, etc.).
-3. Upload `portfolio-plesk.zip` to `httpdocs/` and choose **Extract Files**, then delete the zip.
-   (Or upload the *contents* of `dist/` over FTP. Make sure the hidden `.htaccess` file goes too.)
-4. Under **Hosting & DNS → SSL/TLS Certificates**, issue a free Let's Encrypt certificate.
+1. Upload or `git pull` the project into the domain folder (e.g. `httpdocs/`).
+2. In Plesk, open **Websites & Domains → your domain → Node.js** and set:
+   - **Node.js version:** 20 or newer
+   - **Application root:** the project folder (e.g. `/httpdocs`)
+   - **Document root:** `/httpdocs/dist`
+   - **Application startup file:** `server.cjs`
+   - **Application mode:** production
+3. Click **Enable Node.js**, then **NPM install**.
+4. Click **Run script** and run `build`.
+5. Click **Restart App**.
 
-Routes like `/work`, `/artwork` and `/writing` work on refresh and direct links because of:
+After changing the code, pull the update, then run `build` again and restart the app.
 
-- `public/.htaccess` for Linux Plesk (Apache + nginx). It also forces HTTPS and sets caching.
-- `public/web.config` for Windows Plesk (IIS, needs the URL Rewrite module).
-
-Both files are copied into `dist/` on every build.
-
-> If the domain uses **nginx only** (Apache turned off in *Apache & nginx Settings*), `.htaccess` is ignored. Add this to **Additional nginx directives**:
-> ```nginx
-> location / {
->     try_files $uri $uri/ /index.html;
-> }
-> ```
+To test locally: `npm run build && npm start`, then open http://localhost:3000.
