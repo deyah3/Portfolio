@@ -1,11 +1,12 @@
 {
-  "name": "my-new-app",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:plesk": "vite build && cd dist && zip -r ../portfolio-plesk.zip . -x \"*.kra\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
